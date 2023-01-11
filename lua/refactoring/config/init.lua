@@ -31,6 +31,7 @@ local default_formatting = {
 local default_prompt_func_param_type = {
     go = false,
     java = false,
+    c_sharp = false,
 
     cpp = false,
     c = false,
@@ -42,6 +43,7 @@ local default_prompt_func_param_type = {
 local default_prompt_func_return_type = {
     go = false,
     java = false,
+    c_sharp = false,
 
     cpp = false,
     c = false,

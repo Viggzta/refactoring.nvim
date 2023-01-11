@@ -8,6 +8,7 @@ local python = require("refactoring.code_generation.langs.python")
 local php = require("refactoring.code_generation.langs.php")
 local java = require("refactoring.code_generation.langs.java")
 local ruby = require("refactoring.code_generation.langs.ruby")
+local c_sharp = require("refactoring.code_generation.langs.c_sharp")
 
 local M = {
     javascript = javascript,
@@ -20,6 +21,7 @@ local M = {
     php = php,
     java = java,
     ruby = ruby,
+    c_sharp = c_sharp,
 
     -- TODO: Take this and make all code generation subclassed.
     -- This should just be a function of code generation.
