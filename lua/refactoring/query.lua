@@ -21,7 +21,7 @@ function Query.get_root(bufnr, filetype)
     local parser = parsers.get_parser(bufnr or 0, filetype)
     if not parser then
         error(
-            "No treesitter parser found. Install one using :TSInstall <language>"
+            "No treesitter parser found for " .. filetype ..". Install one using :TSInstall <language>"
         )
     end
     return parser:parse()[1]:root()
