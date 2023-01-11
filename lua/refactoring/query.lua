@@ -18,10 +18,6 @@ Query.query_type = {
 }
 
 function Query.get_root(bufnr, filetype)
-    if filetype == "cs" then
-      filetype = "c_sharp"
-    end
-
     local parser = parsers.get_parser(bufnr or 0, filetype)
     if not parser then
         error(
@@ -65,6 +61,9 @@ end
 
 function Query.find_occurrences(scope, sexpr, bufnr)
     local filetype = vim.bo[bufnr].filetype
+    if filetype == "cs" then
+      filetype = "c_sharp"
+    end
 
     if not sexpr:find("@") then
         sexpr = sexpr .. " @tmp_capture"

@@ -20,6 +20,11 @@ local function refactor_setup(input_bufnr, config)
         end
 
         local filetype = vim.bo[bufnr].filetype
+
+        if filetype == "cs" then
+          filetype = "c_sharp"
+        end
+
         -- TODO: Move this to treesitter get root and get rid of Query
         local root = Query.get_root(bufnr, filetype)
         local win = vim.api.nvim_get_current_win()
